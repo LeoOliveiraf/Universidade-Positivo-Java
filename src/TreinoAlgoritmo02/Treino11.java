@@ -1,4 +1,4 @@
-package Aula06;
+package TreinoAlgoritmo02;
 
 
 import java.util.Scanner;

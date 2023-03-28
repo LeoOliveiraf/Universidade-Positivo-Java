@@ -1,4 +1,4 @@
-package Aula06;
+package TreinoAlgoritmo02;
 
 public class Treino09 {
 	public static void main(String[] args) {
