@@ -19,7 +19,7 @@ private ArrayList<Integer> conjuntoNum = new ArrayList<Integer>();
 		this.conjuntoNum = conjuntoNum;
 	}
 	public Integer adicionar(Integer numero) {
-		if(conjuntoNum.size() == numero) {
+		if(conjuntoNum.contains(numero)) {
 			System.out.println("Numero Invalido! Repetido");
 		}else {
 			 conjuntoNum.add(numero);
