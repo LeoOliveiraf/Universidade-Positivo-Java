@@ -1,57 +1,88 @@
 package Exercicio6OrientacaoObjeto;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
 
 public class Corrida {
-	private double pessoas[];
 	private String dataCorrida;
 	private String horaCorrida;
-	private Participante participante;
+	private ArrayList<Participante> participante = new ArrayList<Participante>();
 	
 	public Corrida() {
-		pessoas = new double[10];
+		
 	}
-	public Corrida(double [] pessoas, String dataCorrida, String horaCorrida, Participante participante) {
-		this.pessoas = pessoas;
+
+	public Corrida(String dataCorrida, String horaCorrida, ArrayList<Participante> participante) {
 		this.dataCorrida = dataCorrida;
 		this.horaCorrida = horaCorrida;
 		this.participante = participante;
-		inicializa();
 	}
-	private void inicializa() {
-		for(int i = 0; i < 10; i++) {
-			//
-		}
-	}
-	public double[] getPessoas() {
-		return pessoas;
-	}
-	public void setPessoas(double[] pessoas) {
-		this.pessoas = pessoas;
-	}
+
 	public String getDataCorrida() {
 		return dataCorrida;
 	}
+
 	public void setDataCorrida(String dataCorrida) {
 		this.dataCorrida = dataCorrida;
 	}
+
 	public String getHoraCorrida() {
 		return horaCorrida;
 	}
+
 	public void setHoraCorrida(String horaCorrida) {
 		this.horaCorrida = horaCorrida;
 	}
-	public Participante getParticipante() {
+
+	public ArrayList<Participante> getParticipante() {
 		return participante;
 	}
-	public void setParticipante(Participante participante) {
+
+	public void  setParticipante(ArrayList<Participante> participante) {
 		this.participante = participante;
 	}
-	public String DataHora(String dataCorrida, String horaCorrida) {
-		Date dataHora = new Date();
-		String dataFormat = new SimpleDateFormat("dd/MM/yyyy").format(dataCorrida);
-		String horaFormat = new SimpleDateFormat("HH:mm:ss").format(horaCorrida);
-		return dataFormat + " " + horaFormat;
+	
+	public Participante adicionar(Participante participantes) {
+		if(participante.contains(participantes)) {
+			System.out.println("Jogador ja faz parte do time");
+		}else {
+			participante.add(participantes);
+		}
+		return participantes;
+	}
+	 
+	public void idade(Integer idade) {
+		int contador = 0;
+		for(Participante itens : participante) {
+			if(itens.getIdade() > idade) {
+				contador++;
+			}
+		}
+		System.out.println("Qtd Pessoas com idade maior: " + contador);
+	}
+	
+	public void imc() {
+		int contador = 0;
+		for(Participante imc : participante) {
+			double result = imc.getPeso() / (imc.getAltura() * imc.getAltura());
+			if(result >= 18.5 && result <= 24.9) {
+				System.out.println("IMC Normal");
+				contador++;
+			}
+			if(result < 18.5) {
+				System.out.println("imc Baixo");
+			}
+			if(result > 24.9) {
+				System.out.println("imc Alto");
+			}
+		}
+		System.out.println("Qtd imc Normal: " + contador);
+	}
+	
+	public void remover(Participante pessoa) {
+		System.out.println(participante.remove(pessoa));
+	}
+	public void dataHora(String data, String hora) {
+		System.out.println("Data d Corrida: " + data);
+		System.out.println("Hora d Corrida: " + hora);
 	}
 }

@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Informe o nome para Remover: ");
+		String nome = input.nextLine();
 		Jogador jogador1 = new Jogador("Leonardo", 7, "Leo", 2, true);
 		Jogador jogador2 = new Jogador("Guilherme", 10, "Gui", 5, false);
 		Jogador jogador3 = new Jogador("Pedro", 23, "Pedrao", 0, false);
 		Jogador jogador4 = new Jogador("Vitor", 9, "Vitao", 10, true);
 		Jogador jogador5 = new Jogador("Daniel", 11, "Dan", 0, false);
-		
-		System.out.println("Informe o nome para Remover: ");
-		String nome = input.nextLine();
 		
 		Time time = new Time();
 		
