@@ -1,9 +1,10 @@
-package Cliente;
- public class Conta{
-	private double saldo;
+package ByteBankCliente;
+
+public class Conta {
+	double saldo;
 	int agencia;
 	int numero;
-	Cliente titular;
+	String titular;
 	
 	void deposita(double valor) {
 		this.saldo += valor;
