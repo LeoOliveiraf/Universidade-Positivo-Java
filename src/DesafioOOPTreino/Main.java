@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+
 		Agenda agenda = new Agenda();
 		Scanner scanner = new Scanner(System.in);
 		String nome = null;
@@ -21,7 +22,7 @@ public class Main {
 					 + "4- Alterar um Contado pelo Nome:\n"
 					 + "5- Imprimir Agenda\n"
 					 +"6- Sair");
-Integer number = scanner.nextInt();
+			Integer number = scanner.nextInt();
 			
 			switch (number) {
 			case 1: {
