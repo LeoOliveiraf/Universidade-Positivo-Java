@@ -5,6 +5,15 @@ package ByteBank;
 	int numero;
 	String titular;
 	
+	
+	//public Conta(double saldo, int agencia, int numero, String titular) {
+
+		//this.saldo = saldo;
+		//this.agencia = agencia;
+		//this.numero = numero;
+		//this.titular = titular;
+	//}
+
 	void deposita(double valor) {
 		this.saldo += valor;
 	}
