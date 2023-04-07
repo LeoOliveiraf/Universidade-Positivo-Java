@@ -1,21 +1,8 @@
 package byteBankHeranca;
-//Gerente é um funcionario, gerente herda da class Funcionario
-public class Gerente extends Funcionario{
-	private int senha;
+//Gerente é um funcionarioAutenticavel, gerente herda da class FuncionarioAutenticavel
+public class Gerente extends FuncionarioAutenticavel{
 	
 	public double getBonificacao() {
-		return super.getBonificacao() + super.getSalario();
-	}
-	
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-	public boolean autentica(int senha) {
-		if(this.senha == senha) {
-			return true;
-		}else {
-			return false;
-		}
-		
+		return  super.getSalario();
 	}
 }
