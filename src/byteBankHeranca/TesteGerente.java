@@ -3,6 +3,10 @@ package byteBankHeranca;
 public class TesteGerente {
 
 	public static void main(String[] args) {
+		
+		Gerente gerente = new Gerente();
+		
+		
 		Gerente g1 = new Gerente();
 		g1.setNome("Marco");
 		g1.setCpf("555.555.555-55");

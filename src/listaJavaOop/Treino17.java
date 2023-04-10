@@ -1,4 +1,4 @@
-package ExercicioOrientacao;
+package listaJavaOop;
 
 import java.util.Scanner;
 
