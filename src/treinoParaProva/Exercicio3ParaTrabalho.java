@@ -5,7 +5,7 @@ public class Exercicio3ParaTrabalho {
 	private String nome;
 	private double preco;
 	private Integer quantidade;
-	private Integer estoque = 0;
+	
 	
 	public Exercicio3ParaTrabalho() {
 		
@@ -52,22 +52,18 @@ public class Exercicio3ParaTrabalho {
 	
 	
 	
-	public void vende(Integer vende, Integer qtdEstoca) {
-		if(qtdEstoca >= vende) {
-			estoque = qtdEstoca - vende;
-			System.out.println("Estoque Atual: " + estoque);
-		}else {
-			System.out.println("Desculpe, estoque Insuficiente");
-		}
+	public void vende(Integer vende) {
+		this.quantidade -= vende;
+		System.out.println(this.quantidade);
 	}
 	
 	public void estocaProduto(Integer estocaProduto) {
-		estoque = estoque + estocaProduto;
-		System.out.println("Estoque Atual: " + estoque);
+		this.quantidade += estocaProduto;
+		System.out.println(this.quantidade);
 	}
 	
 	public void totalEstoque() {
-		double valorTotal = estoque * getPreco() ;
+		double valorTotal = getQuantidade() * getPreco() ;
 		System.out.println("Valor total do Estoque desse Produto é: R$" + valorTotal);
 	}
 }
