@@ -11,14 +11,10 @@ public class Exercicio3ParaTrabalhoMain {
 		produtos.setPreco(50);
 		produtos.setQuantidade(10);
 		Integer estocaProduto = 5;
-		produtos.estocaProduto(estocaProduto);
+		produtos.aumentaEstoque(estocaProduto);
 		produtos.totalEstoque();
 		Integer vende = 3;
-		produtos.vende(vende);
+		produtos.diminuiEstoque(vende);
 		produtos.totalEstoque();
-		
-		
-		
-		
 	}
 }

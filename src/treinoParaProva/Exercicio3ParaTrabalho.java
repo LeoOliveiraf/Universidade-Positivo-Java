@@ -51,15 +51,16 @@ public class Exercicio3ParaTrabalho {
 	}
 	
 	
-	
-	public void vende(Integer vende) {
-		this.quantidade -= vende;
-		System.out.println(this.quantidade);
+	public void diminuiEstoque(Integer vende) {
+		Integer vende2 = getQuantidade() - vende;
+		setQuantidade(vende2);
+		System.out.println(vende2);
 	}
 	
-	public void estocaProduto(Integer estocaProduto) {
-		this.quantidade += estocaProduto;
-		System.out.println(this.quantidade);
+	public void aumentaEstoque(Integer estocaProduto) {
+		Integer estoca2 = getQuantidade() + estocaProduto;
+		setQuantidade(estoca2);
+		System.out.println(estoca2);
 	}
 	
 	public void totalEstoque() {

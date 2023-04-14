@@ -24,4 +24,21 @@ public class Trabalho2 {
 		this.quantidade = quantidade;
 	}
 	
+	 public double totalEstoque() {
+		 double total = getQuantidade() * getPreco();
+		 System.out.println(total);
+		 return total;
+	}
+	 
+	 public void diminuiEstoque(Integer qtdDiminui) {
+		 Integer diminui = getQuantidade() - qtdDiminui;
+		 setQuantidade(diminui);
+		 System.out.println(diminui);
+	 }
+	 
+	 public void aumentaEstoque(Integer qtdAumenta) {
+		 Integer aumenta = getQuantidade() + qtdAumenta;
+		 setQuantidade(aumenta);
+		 System.out.println(aumenta);
+	 }
 }
