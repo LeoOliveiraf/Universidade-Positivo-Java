@@ -1,59 +1,56 @@
 package treinoParaProva;
 
 public class Trabalho3 {
-	private double notaProva1;
-	private double notaProva2;
-	private double notaTrabalho;
-	
+	private double nota1;
+	private double nota2;
+	private double nota3;
 	
 	public Trabalho3() {
 		
 	}
-
-	public Trabalho3(double notaProva1, double notaProva2,
-			double notaTrabalho) {
-		this.notaProva1 = notaProva1;
-		this.notaProva2 = notaProva2;
-		this.notaTrabalho = notaTrabalho;
-	}
-	public double getNotaProva1() {
-		return notaProva1;
-	}
-
-	public void setNotaProva1(double notaProva1) {
-		this.notaProva1 = notaProva1;
-	}
-
-	public double getNotaProva2() {
-		return notaProva2;
-	}
-
-	public void setNotaProva2(double notaProva2) {
-		this.notaProva2 = notaProva2;
-	}
-
-	public double getNotaTrabalho() {
-		return notaTrabalho;
-	}
-
-	public void setNotaTrabalho(double notaTrabalho) {
-		this.notaTrabalho = notaTrabalho;
+	public Trabalho3(double nota1, double nota2, double nota3) {
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+		this.nota3 = nota3;
 	}
 	
-	public double mediaPonderada() {
-		double media = (this.notaProva1 * 2.5) + (this.notaProva2 * 2.5) + (this.notaTrabalho * 2); 
-		double MediaFinal = media / 7;
-		return MediaFinal;
+	public double getNota1() {
+		return nota1;
+	}
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
 	}
 	
-	public int situacaoAluno() {
-		if(mediaPonderada() >= 6) {
-			return 1;
-		}
-		if(mediaPonderada() >= 4 && mediaPonderada() <= 5.9) {
-			return 2;
-		}
-		return 3;
+	public double getNota2() {
+		return nota2;
 	}
-		
+	
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+	
+	public double getNota3() {
+		return nota3;
+	}
+	
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+	
+	public double media() {
+		double media = (nota1 * 2.5) + (nota2 * 2.5) + (nota3 * 2);
+		double total = media / 7;
+		return total;
+	}
+	
+	public int situacao() {
+		if(media() >= 6) {
+			return 1;		
+	}
+	
+	if(media() >= 4 && media() <= 5.9) {
+		return 2;
+	}
+	return 3;
+}
 }

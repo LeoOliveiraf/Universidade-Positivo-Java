@@ -3,14 +3,14 @@ package treinoParaProva;
 public class Trabalho2Main {
 
 	public static void main(String[] args) {
-		
-		Trabalho2 trabalho2 = new Trabalho2();
-		trabalho2.setPreco(50);
-		trabalho2.setQuantidade(0);
-		trabalho2.aumentaEstoque(10);
-		trabalho2.totalEstoque();
-		trabalho2.diminuiEstoque(5);
-		trabalho2.totalEstoque();
+		Trabalho2 tr = new Trabalho2();
+		tr.setPreco(50);
+		tr.setQtd(10);
+		System.out.println(tr.estoque());
+		System.out.println(tr.aumenta(10));
+		System.out.println(tr.estoque());
+		System.out.println(tr.diminui(15));
+		System.out.println(tr.estoque());
 	}
 
 }

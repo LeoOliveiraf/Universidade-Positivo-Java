@@ -1,36 +1,35 @@
 package treinoParaProva;
 
 public class Trabalho1 {
-	
-	public void fatorial(int numero) {
-		int contador = numero;
-		int soma = 0;
-		int numero2 = numero - 1;
-		for(int i =1; i < contador; i++) {
-			soma = numero * numero2;
-			numero = soma;
-			numero2--;
-		}
-		System.out.println("Fatorial: " + soma);
-	}
-	
-	public void exponencial(int x, int y) {
-		int soma = 0;
-		int number = 1;
-		for(int i = 0; i < y; i++) {
-			soma = x * number;
+	public int fatorial(int number) {
+		int soma = 0; 
+		int cont = number;
+		int number2 = number - 1;
+		for(int i= 1; i < cont; i++) {
+			soma = number * number2;
 			number = soma;
+			number2--;
 		}
-		System.out.println("Exponencial: " + number);
+		return soma;
 	}
 	
-	public void maior(int vetor[]) {
+	public int expo(int x, int y) {
+		int soma = 0;
+		int teste = 1;
+		for(int i = 0; i < y; i++) {
+			soma = x * teste;
+			teste = soma;
+		}
+		return soma;
+	}
+	public int maior(int [] vetor) {
 		int soma = vetor[0];
-		for(int i =0; i < vetor.length;i++) {
+		for(int i = 0; i < vetor.length; i++) {
 			if(vetor[i] > soma) {
 				soma = vetor[i];
 			}
 		}
-		System.out.println("Valor Maior: " + soma);
+		return soma;
 	}
 }
+
