@@ -6,18 +6,6 @@ public class Exercicio3ParaTrabalho {
 	private double preco;
 	private Integer quantidade;
 	
-	
-	public Exercicio3ParaTrabalho() {
-		
-	}
-
-	public Exercicio3ParaTrabalho(Integer identificador, String nome, double preco, Integer quantidade) {
-		this.identificador = identificador;
-		this.nome = nome;
-		this.preco = preco;
-		this.quantidade = quantidade;
-	}
-
 	public Integer getIdentificador() {
 		return identificador;
 	}

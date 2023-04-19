@@ -7,20 +7,6 @@ public class Exercicio2ParaTrabalho {
 	private double notaProva2;
 	private double notaTrabalho;
 	
-	
-	public Exercicio2ParaTrabalho() {
-		
-	}
-
-	public Exercicio2ParaTrabalho(Integer matricula, String nome, double notaProva1, double notaProva2,
-			double notaTrabalho) {
-		super();
-		this.matricula = matricula;
-		this.nome = nome;
-		this.notaProva1 = notaProva1;
-		this.notaProva2 = notaProva2;
-		this.notaTrabalho = notaTrabalho;
-	}
 
 	public Integer getMatricula() {
 		return matricula;

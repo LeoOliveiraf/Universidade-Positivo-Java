@@ -9,7 +9,7 @@ public class Trabalho2Main {
 		System.out.println(tr.estoque());
 		System.out.println(tr.aumenta(10));
 		System.out.println(tr.estoque());
-		System.out.println(tr.diminui(15));
+		System.out.println(tr.diminui(5));
 		System.out.println(tr.estoque());
 	}
 

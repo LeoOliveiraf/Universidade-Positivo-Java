@@ -39,18 +39,18 @@ public class Trabalho3 {
 	
 	public double media() {
 		double media = (nota1 * 2.5) + (nota2 * 2.5) + (nota3 * 2);
-		double total = media / 7;
-		return total;
-	}
-	
-	public int situacao() {
-		if(media() >= 6) {
-			return 1;		
-	}
-	
-	if(media() >= 4 && media() <= 5.9) {
-		return 2;
-	}
-	return 3;
+		double ponderada = media / 7;
+		return ponderada;
 }
+	
+	public int situ() {
+		if(media() >= 6) {
+			return 1;
+		}
+		if(media() >= 4 && media() <= 5.9) {
+			return 2;
+		}
+		return 3;
+		
+	}
 }

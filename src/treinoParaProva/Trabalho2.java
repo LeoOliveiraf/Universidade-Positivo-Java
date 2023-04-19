@@ -4,15 +4,6 @@ public class Trabalho2 {
 	private double preco;
 	private int qtd;
 	
-	public Trabalho2() {
-		
-	}
-	
-	public Trabalho2(double preco, int qtd) {
-		this.preco = preco;
-		this.qtd = qtd;
-	}
-	
 	public double getPreco() {
 		return preco;
 	}
@@ -33,16 +24,14 @@ public class Trabalho2 {
 		double total = this.qtd * this.preco;
 		return total;
 	}
-	
-	public int diminui(int quantidade) {
-		int diminui = getQtd() - quantidade;
-		setQtd(diminui);
-		return diminui;
+	public int diminui(int quanti) {
+		int dimi = getQtd() - quanti;
+		setQtd(dimi);
+		return dimi;
 	}
-	
-	public int aumenta(int quantidade) {
-		int aumenta = getQtd() + quantidade;
-		setQtd(aumenta);
-		return aumenta;
+	public int aumenta(int aum) {
+		int aume = getQtd() + aum;
+		setQtd(aume);
+		return aume;
 	}
 }
