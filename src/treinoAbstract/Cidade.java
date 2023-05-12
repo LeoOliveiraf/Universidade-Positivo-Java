@@ -62,12 +62,7 @@ public class Cidade {
 	public void calculaEmissaoMensal() {
 		double soma = 0;
 		for(int i = 0; i < cidade.size(); i++) {
-			if(cidade.get(i) instanceof Predio) {
-				soma += cidade.get(i).quantidadeEmitida();
-			}
-			if(cidade.get(i) instanceof Carro){
-				soma += cidade.get(i).quantidadeEmitida();
-			}
+			soma += cidade.get(i).quantidadeEmitida();
 		}
 		System.out.println("Emissao Mensal é de " + soma + " por mes!");
 	}
