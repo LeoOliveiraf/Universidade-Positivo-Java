@@ -1,8 +1,8 @@
-package desconto;
+package designPatterns1;
 
 import java.math.BigDecimal;
 
-import orcamento.Orcamento;
+import designPatterns1.Orcamento;
 
 public class DescontoParaOrcamentoMaiorQCincoItens extends Desconto{
 	public DescontoParaOrcamentoMaiorQCincoItens(Desconto proximo) {

@@ -1,8 +1,8 @@
-package imposto;
+package designPatterns1;
 
 import java.math.BigDecimal;
 
-import orcamento.Orcamento;
+import designPatterns1.Orcamento;
 
 public class ICMS implements Imposto{
 	public BigDecimal calcular(Orcamento orcamento) {

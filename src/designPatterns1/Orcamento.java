@@ -1,4 +1,4 @@
-package orcamento;
+package designPatterns1;
 
 import java.math.BigDecimal;
 
