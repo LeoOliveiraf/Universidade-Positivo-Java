@@ -16,8 +16,14 @@ public class Orcamento {
 		BigDecimal valorDoDescontoExtra = BigDecimal.ZERO; 
 		if(situacao.equals("EM ANALISE")) {
 			valorDoDescontoExtra = new BigDecimal("0,05");
+		}else if(situacao.equals("APROVADO")) {
+			valorDoDescontoExtra = new BigDecimal("0.02");
 		}
-				this.valor = this.valor.subtract(valorDoDescontoExtra);
+			this.valor = this.valor.subtract(valorDoDescontoExtra);
+	}
+	
+	public void aprovar() {
+		this.situacao = "APROVADO";
 	}
 	public int getQuantidadeItens() {
 		return quantidadeItens;
